@@ -3,6 +3,9 @@
 Created on Thu Sep 15 21:11:35 2022
 
 @author: juans
+Programa que recibe la relacion de señal a ruido y el Bit-Rate y regresa los Errores por 
+segundo que puede tener al trasmitirse 
+
 """
 
 import math

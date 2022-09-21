@@ -50,8 +50,9 @@ for c in string:
     else:
         freq[c] = 1
 
-#freq=[('a',8),('b',8),('c',4),('d',4),('e',2),('f',2)]
+freq={'A':5000,'B':2500,'C':1250,'D':625,'E':375,'F':250}
 freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
+
 
 nodes = freq
 

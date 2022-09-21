@@ -6,9 +6,12 @@ Created on Thu Sep 15 23:20:02 2022
 """
 
 # Huffman Coding in python
+import math
 
+string= 'aaaaaabbbbbbbbccccd'
+#string = 'aaaabbcd' #con este huffman llega al limite
 #string = '       aaaaeeeefffhhiimmnnssttloprux'
-string='aaaaaaaabbbbbbbbccccddddeeff'
+#string='aaaaaaaabbbbbbbbccccddddeeff'
 
 
 # Creating tree nodes
@@ -67,3 +70,20 @@ print(' Char | Huffman code ')
 print('----------------------')
 for (char, frequency) in freq:
     print(' %-4r |%12s' % (char, huffmanCode[char]))
+
+#Calcular la cantida de simbolos para saber el total que hay 
+total=0
+for symbol in freq:
+    total+=symbol[1]
+
+
+#Calcula la entropia de la fuente
+Entropy = 0
+L_av = 0
+for symbol in freq:
+    P=symbol[1]/total #Calcula la probabilidad de cada simbolo
+    #print("Para",symbol[0],"probabilidad es",P)
+    Entropy+=P*math.log2(1/P)
+    L_av+=len(huffmanCode[symbol[0]])*P
+print("Longitud promedio huffman: ",L_av)
+print("Source Entropy: ",Entropy)

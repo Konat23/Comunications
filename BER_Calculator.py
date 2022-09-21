@@ -11,7 +11,7 @@ segundo que puede tener al trasmitirse
 import math
 
 R=10**5 #Bit rate example #[bps]
-SNR_dB=14; #Relacion señal a ruido, 
+SNR_dB=14; #Relacion señal a ruido en dB, 
 
 
 SNR_lin=10**(SNR_dB/10)
